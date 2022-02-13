@@ -27,3 +27,9 @@ div.ui.container {
 .extra.content button {
   margin-top: 10px;
 }
+
+@media screen and (max-width: 500px) {
+  .menu .item {
+    font-size: 11px;
+  }
+}
