@@ -46,32 +46,23 @@ const GetLikesDislikes = (props) => {
 
   return data && user ? (
     <Card.Content extra>
-      <Button as='div' labelPosition='right'>
+      <Button.Group size='medium'>
         <Button
           basic={!data.liked_by.includes(user.id)}
           color='blue'
           onClick={() => likePost(data._id)}
         >
           <Icon name='thumbs up' />
-          Like
         </Button>
-        <Label as='a' basic color='blue' pointing='left'>
-          {data.liked_by.length}
-        </Label>
-      </Button>
-      <Button as='div' labelPosition='right'>
+        <Button.Or text={data.liked_by.length - data.disliked_by.length} />
         <Button
           basic={!data.disliked_by.includes(user.id)}
           color='green'
           onClick={() => dislikePost(data._id)}
         >
           <Icon name='thumbs down outline' />
-          Dislike
         </Button>
-        <Label as='a' basic color='green' pointing='left'>
-          {data.disliked_by.length}
-        </Label>
-      </Button>
+      </Button.Group>
       {!comment && !window.location.href.includes('/post?') &&
         <Button
           basic

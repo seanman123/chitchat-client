@@ -28,6 +28,27 @@ div.ui.container {
   margin-top: 10px;
 }
 
+.ui.medium.buttons {
+  margin-right: 5px;
+}
+
+.ui.large.form {
+  padding: 0 15px;
+}
+
+.ui.buttons div.or {
+  width: 0.3em;
+}
+.ui.buttons div.or:before {
+  background-color: #767676;
+  color: white;
+  width: 2.32em;
+  height: 2.32em;
+  line-height: 2.32em;
+  top: 40%;
+  left: -80%;
+}
+
 @media only screen and (max-width: 500px) {
   .menu .item {
     font-size: 11px;
